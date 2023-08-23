@@ -1,0 +1,96 @@
+// Newsletter popup style
+$green: #badebd;
+$black: #000000;
+
+.popup-template {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    min-width: 250px;
+    max-width: 600px;
+    height: 600px;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: $green;
+    background-image: url('./Pop\ up\ FINAL-ai.png');
+    background-position: top left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.popup-inner {
+    &--top {
+        position: relative;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &::before {
+            content: "";
+            display: block;
+            width: 112px;
+            height: 112px;
+            position: absolute;
+            z-index: 5;
+            right: 30px;
+            bottom: -40px;
+            background-image: url(./Organic_\ natural.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &::after {
+            content: "";
+            display: block;
+            background-image: url(./Zeka.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 56px;
+            height: 175px;
+            position: absolute;
+            z-index: 3;
+            right: 50px;
+            bottom: 19px;
+        }
+    }
+    &--bottom {
+        display: block;
+        position: relative;
+        color: $black;
+        text-align: center;
+        h3 {
+            font-size: calc(22px + (44 - 22) * ((100vw - 300px) / (2300 - 300)));
+            font-weight: 500;
+            margin-top: 50px;
+        }
+        p {
+            font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (2300 - 300)));
+        }
+        &::before {
+            content: "";
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 3px;
+            bottom: 10px;
+            width: 177px;
+            height: 70px;
+            background-image: url(./popup-leaf_right.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+.envelope {
+    width: 100%;
+    max-width: 164px;
+}
+.popup-logo {
+    width: 100%;
+    max-width: 164px;
+    padding-top: 20px;
+}
