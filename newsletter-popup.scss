@@ -16,8 +16,7 @@ $dark-gray: #565656;
     min-width: 250px;
     max-width: 600px;
     height: 600px;
-    border-radius: 20px;
-    margin: 20px;
+    border-radius: 40px;
     background-color: $green;
     background-image: url('./Pop\ up\ FINAL-ai.png');
     background-position: top left;
@@ -25,6 +24,11 @@ $dark-gray: #565656;
     background-repeat: no-repeat;
     &.show {
         display: block;
+    }
+    @media screen and (max-width: 768px) {
+        max-width: 350px;
+        height: auto;
+        min-height: 470px;
     }
 }
 body {
@@ -61,6 +65,11 @@ body {
             background-image: url(./Organic_\ natural.png);
             background-size: contain;
             background-repeat: no-repeat;
+            @media screen and (max-width: 768px) {
+                width: 65px;
+                height: 65px;
+                bottom: -21px;
+            }
         }
         &::after {
             content: "";
@@ -74,6 +83,10 @@ body {
             z-index: 3;
             right: 50px;
             bottom: 19px;
+            @media screen and (max-width: 768px) {
+                width: 35px;
+                height: 100px;
+            }
         }
     }
     &--bottom {
@@ -82,9 +95,9 @@ body {
         color: $black;
         text-align: center;
         h3 {
-            font-size: calc(22px + (44 - 22) * ((100vw - 300px) / (2300 - 300)));
+            font-size: calc(20px + (38 - 20) * ((100vw - 300px) / (2300 - 300)));
             font-weight: 500;
-            margin-top: 50px;
+            margin-top: 60px;
         }
         p {
             font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (2300 - 300)));
@@ -100,6 +113,9 @@ body {
             background-image: url(./popup-leaf_left.png);
             background-size: contain;
             background-repeat: no-repeat;
+            @media screen and (max-width: 768px) {
+                top: -45px;
+            }
         }
         &::after {
             content: "";
@@ -112,17 +128,26 @@ body {
             background-image: url(./popup-leaf_right.png);
             background-size: contain;
             background-repeat: no-repeat;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
 }
 .envelope {
     width: 100%;
     max-width: 164px;
+    @media screen and (max-width: 768px) {
+        max-width: 75px;
+    }
 }
 .popup-logo {
     width: 100%;
     max-width: 164px;
     padding-top: 20px;
+    @media screen and (max-width: 768px) {
+        max-width: 80px;
+    }
 }
 .newsletter-input {
     display: block;
@@ -134,7 +159,9 @@ body {
     border: 1px solid $gray;
     text-align: center;
     font-size: 18px;
-    text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+        max-width: 270px;
+    }
 }
 .newsletter-btn {
     font-size: 20px;
@@ -168,8 +195,8 @@ body {
     height: 40px;
     z-index: 1000;
     position: absolute;
-    right: -13px;
-    top: -10px;
+    right: -9px;
+    top: -5px;
     cursor: pointer;
     img {
         width: 100%;
