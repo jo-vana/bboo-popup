@@ -16,7 +16,8 @@
 </head>
 <body>
     <!-- START popup newsletter template -->
-    <div id="popup-template" class="popup-template">
+    <div id="popup_template" class="popup-template">
+        <button id="close_popup" class="close-popup"><img src="./close_popup_icon.png" alt="close"></button>
         <div class="popup-inner--top">
             <img src="./mail.png" alt="envelope" class="envelope">
             <img src="./BABY BOO logo.png" alt="baby-boo-logo" class="popup-logo">
@@ -26,10 +27,15 @@
             <p>na naš newsletter i primajte najnovije vesti o našim<br> 
                 proizvodima i akcijama direktno u vaš inbox. </p>    
             <p>Poklon Baby Boo raspored časova za vaše školarce.</p>
-            <input type="text" placeholder="VAŠA EMAIL ADRESA">
-            <button>POŠALJI</button>
+            <form action="submit">
+                <input type="email" placeholder="VAŠA EMAIL ADRESA" class="newsletter-input" id="newsletter_input">
+                <small id="email_validation" class="email-validation"></small>
+                <input type="button" class="newsletter-btn" id="get_email" value="POŠALJI"></input>
+            </form>
         </div>
     </div>
     <!-- END popup newsletter template -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
