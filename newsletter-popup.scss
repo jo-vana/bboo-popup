@@ -32,7 +32,15 @@ $dark-gray: #565656;
     }
 }
 body {
-    &.overlay {
+    &.overlay-popup {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-y: hidden;
+        margin: 0;
         &::after {
             content: "";
             display: block;
@@ -101,6 +109,7 @@ body {
         }
         p {
             font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (2300 - 300)));
+            margin: 1em 0 !important;
         }
         &::before {
             content: "";

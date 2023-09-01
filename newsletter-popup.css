@@ -28,7 +28,17 @@
   }
 }
 
-body.overlay::after {
+body.overlay-popup {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  margin: 0;
+}
+body.overlay-popup::after {
   content: "";
   display: block;
   position: absolute;
@@ -99,6 +109,7 @@ body.overlay::after {
 }
 .popup-inner--bottom p {
   font-size: calc(10px + 8 * (100vw - 300px) / 2000);
+  margin: 1em 0 !important;
 }
 .popup-inner--bottom::before {
   content: "";
